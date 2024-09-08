@@ -1,0 +1,123 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+/* end css reset */
+
+:root {
+    --primary: #f4d04e;
+    --secondary: hsl(0, 0%, 7%);
+    --text: hsl(0, 0%, 42%);
+    --cardBG: hsl(0, 0%, 100%);
+
+    --font: "Figtree", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font);
+    background-color: var(--primary);
+}
+
+/* Main */
+.wrapper {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main-Card */
+.card {
+    max-width: 24rem;
+    background-color: var(--cardBG);
+    border: 1px solid var(--secondary);
+    border-radius: 1.5rem;
+    margin: 0 1.5rem;
+    padding: 1.2rem;
+    -webkit-box-shadow: 8px 8px 0px 0px black;
+    -moz-box-shadow: 8px 8px 0px 0px black;
+    box-shadow: 8px 8px 0px 0px black;
+}
+.card__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__image img {
+    border-radius: .5rem;
+}
+.card-bottom {
+    margin-top: 1.2rem;
+    margin-left: .2rem;
+}
+.card__category {
+    background-color: var(--primary);
+    display: inline-block;
+    border-radius: .2rem;
+    padding: 4px 12px;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+.card__title:hover {
+    cursor: pointer;
+    color: var(--primary);
+}
+.card__date {
+    color: var(--secondary);
+    margin-top: .7rem;
+    margin-bottom: 1rem;
+}
+.card__text {
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.card__author-avatar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 16px;
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+}
+/* Main-Utility */
+.bold {
+    font-weight: 800;
+}
+
+/* MQ */
+@media (max-width: 239px) {
+    body {
+        display: none;
+    }
+}
